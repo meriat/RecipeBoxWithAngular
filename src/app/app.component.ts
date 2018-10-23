@@ -24,21 +24,21 @@ orangeChickenDirections: string[] = [
   'Then add seasonings for more taste'
   ];
 
-  // adoboIngredients: string[] = [
-  //   'Chicken',
-  //   'Vinegar',
-  //   'Soy-Sauce',
-  //   'Seasonings'
-  //   ];
+  adoboIngredients: string[] = [
+    'Chicken',
+    'Vinegar',
+    'Soy-Sauce',
+    'Seasonings'
+    ];
 
-  // adoboDirections: string [] = [
-  //   'Heat the vegetable oil in a large skillet over medium-high heat. Cook chicken pieces until golden brown on both sides, then remove. Stir in the onion and garlic; cook until they soften and brown, about 6 minutes.',
-  //   'Pour in vinegar and soy sauce, and season with garlic powder, black pepper, and bay leaf. Add the browned chicken, increase the heat to high, and bring to a boil. Reduce heat to medium-low, cover, and simmer until the chicken is tender and cooked through, 35 to 40 minutes.'
-  // ];
+  adoboDirections: string [] = [
+    'Heat the vegetable oil in a large skillet over medium-high heat. Cook chicken pieces until golden brown on both sides, then remove. Stir in the onion and garlic; cook until they soften and brown, about 6 minutes.',
+    'Pour in vinegar and soy sauce, and season with garlic powder, black pepper, and bay leaf. Add the browned chicken, increase the heat to high, and bring to a boil. Reduce heat to medium-low, cover, and simmer until the chicken is tender and cooked through, 35 to 40 minutes.'
+  ];
 
   recipes: Recipe[] = [
     new Recipe(this.orangeChickentitle , this.orangeChickenIngredients, this.orangeChickenDirections ),
-    // new Recipe('Adobo Chicken', this.adoboIngredients, this.adoboDirections )
+    new Recipe('Adobo Chicken', this.adoboIngredients, this.adoboDirections )
   ];
 
     viewRecipe =  null;
