@@ -1,0 +1,20 @@
+<div class="jumbotron">
+  <h1 style="text-align: center">{{title}}</h1>
+</div>
+<div class="container">
+  <div class="col-md-6">
+    <div *ngFor="let currentRecipe of recipes">
+      <hr>
+      <h2><b>{{currentRecipe.title}}</b></h2>
+      <br>
+      <h4>Ingredients</h4>
+      <ul>
+        <li *ngFor="let currentIngredient of currentRecipe.ingredients">{{currentIngredient}}
+      </ul>
+      <h4>Directions</h4>
+      <ul>
+        <li *ngFor="let currentDirection of currentRecipe.directions">{{currentDirection}}
+      </ul>
+    </div>
+  </div>
+</div>
