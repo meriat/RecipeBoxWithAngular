@@ -3,18 +3,34 @@
 </div>
 <div class="container">
   <div class="col-md-6">
+    <hr>
+
+    <br>
     <div *ngFor="let currentRecipe of recipes">
-      <hr>
-      <h2><b>{{currentRecipe.title}}</b></h2>
+   
+        <h2>{{currentRecipe.title}}</h2>
       <br>
-      <h4>Ingredients</h4>
-      <ul>
-        <li *ngFor="let currentIngredient of currentRecipe.ingredients">{{currentIngredient}}
-      </ul>
-      <h4>Directions</h4>
-      <ul>
-        <li *ngFor="let currentDirection of currentRecipe.directions">{{currentDirection}}
-      </ul>
+      <button (click)="editRecipe(currentRecipe)" class="btn btn-warning" style="color: red">Show Recipe</button>
+      <div *ngIf="viewRecipe">
+          <label for="add">Edit Title:</label>
+          <input [(ngModel)]="currentRecipe.title" type="text">
+          <button (click)="finishEdit()" class="btn btn-primary">Change</button>
+      <div>
+        <h4>Ingredients</h4>
+        <ul>
+          <li *ngFor="let currentIngredient of currentRecipe.ingredients">{{currentIngredient}}
+          <li>{{newIngredient}}</li>
+        </ul>
+        <label for="add">Add New:</label>
+        <input [(ngModel)]="newIngredient" type="text">
+        <h4>Directions</h4>
+        <ul>
+          <li *ngFor="let currentDirection of currentRecipe.directions">{{currentDirection}}
+          <li>{{newDirection}}</li>
+        </ul>
+        <label for="add">Add New:</label>
+        <input [(ngModel)]="newDirection" type="text"> <br />
+        <button (click)="finishEdit()" class="btn btn-success">Done</button>
     </div>
   </div>
 </div>
